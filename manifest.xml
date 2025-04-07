@@ -1,8 +1,21 @@
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" ...>
-  <Id>75757d4f-448b-42b7-b375-ea54bfd24267</Id>
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp 
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:type="MessageRead">
+
+  <Id>975757d4f-448b-42b7-b375-ea54bfd24267</Id> <!-- Replace with your GUID -->
   <Version>1.0.0.0</Version>
-  <ProviderName>PPT Group AI</ProviderName>
+  <ProviderName>Santova AI</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
+
+  <DisplayName DefaultValue="Santova Outlook AI Bot"/>
+  <Description DefaultValue="Assign categories and manage escalations for email cases directly from Outlook."/>
+
+  <IconUrl DefaultValue="https://outlook-addin-779a.onrender.com/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://outlook-addin-779a.onrender.com/icon-128.png"/>
+
+  <SupportUrl DefaultValue="https://santova.com"/>
 
   <Hosts>
     <Host Name="Mailbox"/>
@@ -24,4 +37,5 @@
   </FormSettings>
 
   <Permissions>ReadWriteMailbox</Permissions>
+
 </OfficeApp>
