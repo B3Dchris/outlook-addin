@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: santova-addin-ui
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
