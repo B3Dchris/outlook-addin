@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp 
-  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
   xsi:type="MessageRead">
@@ -11,8 +11,8 @@
   <ProviderName>PPT Group AI</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
-  <DisplayName DefaultValue="PPT Group Outlook AI Bot"/>
-  <Description DefaultValue="Assign categories and manage escalations for email cases directly from Outlook."/>
+  <DisplayName DefaultValue="PPT Outlook AI Bot"/>
+  <Description DefaultValue="Assign categories and manage escalations directly in Outlook"/>
   <IconUrl DefaultValue="https://outlook-addin-779a.onrender.com/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://outlook-addin-779a.onrender.com/icon-128.png"/>
   <SupportUrl DefaultValue="https://pptgroup.co.za"/>
@@ -38,8 +38,8 @@
 
   <Permissions>ReadWriteMailbox</Permissions>
 
-  <VersionOverrides 
-    xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
     xsi:type="VersionOverridesV1_0">
 
     <Requirements />
@@ -51,11 +51,11 @@
             <OfficeTab id="Message">
               <Group id="msgReadGroup">
                 <Label resid="groupLabel"/>
-                <Control xsi:type="Button" id="launchPaneButton">
+                <Control xsi:type="Button" id="showTaskPaneButton">
                   <Label resid="buttonLabel"/>
                   <Supertip>
                     <Title resid="buttonTitle"/>
-                    <Description resid="buttonDescription"/>
+                    <Description resid="buttonDesc"/>
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="icon16"/>
@@ -63,7 +63,7 @@
                     <bt:Image size="80" resid="icon80"/>
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="paneUrl"/>
+                    <SourceLocation resid="taskpaneUrl"/>
                   </Action>
                 </Control>
               </Group>
@@ -82,18 +82,11 @@
 
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://outlook-addin-779a.onrender.com/function.html"/>
-        <bt:Url id="paneUrl" DefaultValue="https://outlook-addin-779a.onrender.com/panel.html"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://outlook-addin-779a.onrender.com/panel.html"/>
       </bt:Urls>
 
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="AI Tools"/>
-        <bt:String id="buttonLabel" DefaultValue="Open Panel"/>
-        <bt:String id="buttonTitle" DefaultValue="PPT Group Outlook AI"/>
-      </bt:ShortStrings>
-
-      <bt:LongStrings>
-        <bt:String id="buttonDescription" DefaultValue="Use AI to categorize and manage emails."/>
-      </bt:LongStrings>
-    </Resources>
-  </VersionOverrides>
-</OfficeApp>
+        <bt:String id="buttonLabel" DefaultValue="Open Assistant"/>
+        <bt:String id="buttonTitle" DefaultValue="PPT Outlook AI Bot"/>
+      </bt:
