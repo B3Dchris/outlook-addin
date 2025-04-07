@@ -89,4 +89,11 @@
         <bt:String id="groupLabel" DefaultValue="AI Tools"/>
         <bt:String id="buttonLabel" DefaultValue="Open Assistant"/>
         <bt:String id="buttonTitle" DefaultValue="PPT Outlook AI Bot"/>
-      </bt:
+      </bt:ShortStrings>
+
+      <bt:LongStrings>
+        <bt:String id="buttonDesc" DefaultValue="Open the AI assistant for tagging and escalation tools"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
