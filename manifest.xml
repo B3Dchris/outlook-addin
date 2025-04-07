@@ -1,7 +1,7 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" ...>
   <Id>75757d4f-448b-42b7-b375-ea54bfd24267</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Santova AI</ProviderName>
+  <ProviderName>PPT Group AI</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
   <Hosts>
