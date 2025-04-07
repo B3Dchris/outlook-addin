@@ -17,7 +17,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://your-app-url.com/panel.html"/>
+        <SourceLocation DefaultValue="https://outlook-addin-779a.onrender.com/panel.html"/>
         <RequestedHeight>300</RequestedHeight>
       </DesktopSettings>
     </Form>
