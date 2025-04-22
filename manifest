@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
+
+  <Id>975757d4-f448-42b7-b375-ea54bfd24267</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>PPT Group AI</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+
+  <DisplayName DefaultValue="PPT Outlook AI Bot"/>
+  <Description DefaultValue="Assign categories and manage escalations in Outlook"/>
+  <IconUrl DefaultValue="https://outlook-addin-779a.onrender.com/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://outlook-addin-779a.onrender.com/icon-128.png"/>
+  <SupportUrl DefaultValue="https://pptgroup.co.za"/>
+
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
+
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://outlook-addin-779a.onrender.com/panel.html"/>
+        <RequestedHeight>300</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadWriteMailbox</Permissions>
+
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+  </Rule>
+
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+    xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+    xsi:type="VersionOverridesV1_0">
+
+    <Requirements />
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <FunctionFile resid="functionFile"/>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="Message">
+              <Group id="msgReadGroup">
+                <Label resid="groupLabel"/>
+                <Control xsi:type="Button" id="showTaskPaneButton">
+                  <Label resid="buttonLabel"/>
+                  <Supertip>
+                    <Title resid="buttonTitle"/>
+                    <Description resid="buttonDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="taskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://outlook-addin-779a.onrender.com/icon-64.png"/>
+        <bt:Image id="icon32" DefaultValue="https://outlook-addin-779a.onrender.com/icon-64.png"/>
+        <bt:Image id="icon80" DefaultValue="https://outlook-addin-779a.onrender.com/icon-128.png"/>
+      </bt:Images>
+
+      <bt:Urls>
+        <bt:Url id="functionFile" DefaultValue="https://outlook-addin-779a.onrender.com/function.html"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://outlook-addin-779a.onrender.com/panel.html"/>
+        <bt:Url id="supportUrl" DefaultValue="https://pptgroup.co.za"/>
+      </bt:Urls>
+
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="AI Tools"/>
+        <bt:String id="buttonLabel" DefaultValue="Open Assistant"/>
+        <bt:String id="buttonTitle" DefaultValue="PPT Outlook AI Bot"/>
+        <bt:String id="displayName" DefaultValue="PPT Outlook AI Bot"/>
+        <bt:String id="desc" DefaultValue="Assign categories and manage escalations in Outlook"/>
+      </bt:ShortStrings>
+
+      <bt:LongStrings>
+        <bt:String id="buttonDesc" DefaultValue="Launch the assistant for tagging and escalation tools."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
