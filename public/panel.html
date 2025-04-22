@@ -9,17 +9,44 @@
     h1 { font-size: 18px; margin-bottom: 10px; }
     select, button { margin-top: 10px; padding: 5px; font-size: 14px; }
     #status { margin-top: 10px; font-weight: bold; }
+    #results { margin-top: 20px; font-size: 14px; }
+    .section { margin-bottom: 30px; }
   </style>
 </head>
 <body>
   <h1>Santova AI Tools</h1>
 
-  <!-- Dropdown for category selection -->
-  <label for="category-select">Category:</label><br />
-  <select id="category-select"></select><br />
+  <!-- Section for editing SLA Times -->
+  <div class="section">
+    <h3>Edit SLA Times</h3>
+    <label for="sla-category">Category:</label>
+    <select id="sla-category"></select><br/>
+    <label for="sla-time">SLA Time (hours):</label>
+    <input type="number" id="sla-time" /><br/>
+    <button onclick="saveSlaTime()">Save SLA Time</button>
+  </div>
 
-  <!-- Button to save selected category -->
-  <button onclick="saveCategory()">Save</button>
+  <!-- Section for editing Escalation People -->
+  <div class="section">
+    <h3>Edit Escalation People</h3>
+    <label for="escalation-category">Category:</label>
+    <select id="escalation-category"></select><br/>
+    <label for="escalation-person">Assigned to:</label>
+    <input type="text" id="escalation-person" /><br/>
+    <button onclick="saveEscalationPerson()">Save Escalation Person</button>
+  </div>
+
+  <!-- Section for Suggested Replies -->
+  <div class="section">
+    <h3>Suggested Reply</h3>
+    <p><strong>Category:</strong> <span id="classified-category">N/A</span></p>
+    <p><strong>Sentiment:</strong> <span id="sentiment">N/A</span></p>
+    <p><strong>Urgency:</strong> <span id="urgency">N/A</span></p>
+    <textarea id="suggested-reply" rows="6" cols="50"></textarea><br/>
+    <button onclick="approveReply()">Approve</button>
+    <button onclick="editReply()">Edit</button>
+    <button onclick="declineReply()">Decline</button>
+  </div>
 
   <!-- Status message displayed after save -->
   <div id="status"></div>
