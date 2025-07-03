@@ -47,7 +47,7 @@
     xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
     xsi:type="VersionOverridesV1_0">
 
-    <Requirements />
+    <Requirements /
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
@@ -94,8 +94,8 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="AI Tools"/>
         <bt:String id="buttonLabel" DefaultValue="Open Assistant"/>
-        <bt:String id="buttonTitle" DefaultValue="PPT Outlook AI Bot"/>
-        <bt:String id="displayName" DefaultValue="PPT Outlook AI Bot"/>
+        <bt:String id="buttonTitle" DefaultValue="Santova AI button"/>
+        <bt:String id="displayName" DefaultValue="Santova AI"/>
         <bt:String id="desc" DefaultValue="Assign categories and manage escalations in Outlook"/>
       </bt:ShortStrings>
 
